@@ -1,0 +1,57 @@
+# Datasets do projeto
+# Os dois CSVs sao os arquivos originais do professor
+
+diabetes_modelling:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/diabetes-dataset-modelling.csv
+
+diabetes_inference:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/diabetes-dataset-inference.csv
+
+diabetes_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/diabetes_cleaned.parquet
+
+diabetes_featured:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/diabetes_featured.parquet
+
+X_train:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/X_train.parquet
+
+X_test:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/X_test.parquet
+
+y_train:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/y_train.parquet
+
+y_test:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/y_test.parquet
+
+scaler:
+  type: pickle.PickleDataset
+  filepath: data/06_models/scaler.pkl
+  backend: joblib
+
+feature_columns:
+  type: pickle.PickleDataset
+  filepath: data/06_models/feature_columns.pkl
+  backend: joblib
+
+best_model:
+  type: pickle.PickleDataset
+  filepath: data/06_models/best_model.pkl
+  backend: joblib
+
+model_metrics:
+  type: pandas.CSVDataset
+  filepath: data/06_models/model_metrics.csv
+
+predictions:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/predictions.csv

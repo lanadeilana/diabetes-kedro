@@ -1,0 +1,27 @@
+zero_as_nan_cols:
+  - Glucose
+  - BloodPressure
+  - SkinThickness
+  - Insulin
+  - BMI
+
+knn_imputer_neighbors: 5
+outlier_q1: 0.05
+outlier_q3: 0.95
+test_size: 0.30
+random_state: 17
+
+selected_model: lightgbm
+
+lgbm_params:
+  n_estimators: 300
+  learning_rate: 0.05
+  num_leaves: 31
+  random_state: 42
+  verbose: -1
+
+rf_params:
+  n_estimators: 200
+  random_state: 46
+
+prediction_threshold: 0.5

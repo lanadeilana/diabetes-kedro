@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diabetes_prediction"
+version = "0.1.0"
+description = "Pipeline Kedro para previsao de diabetes - PADS 2025"
+requires-python = ">=3.11"
+dependencies = [
+    "kedro>=1.0.0",
+    "kedro-datasets[pandas,pickle]>=3.0.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scikit-learn>=1.3.0",
+    "xgboost>=2.0.0",
+    "lightgbm>=4.0.0",
+    "joblib>=1.3.0",
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.27.0",
+    "pyarrow>=14.0.0",
+]
+
+[tool.kedro]
+package_name = "diabetes_prediction"
+project_name = "Diabetes Prediction"
+kedro_init_version = "1.3.0"
+
+[tool.kedro_telemetry]
+project_id = "e3a58f274ee04701ba598b5cdb58f694"
