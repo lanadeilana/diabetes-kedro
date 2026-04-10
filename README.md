@@ -1,6 +1,8 @@
 # Previsão de Diabetes com Kedro
 
-Projeto desenvolvido para a disciplina de Data Science e Decisão (PADS - Insper).
+Aluna: Ilana García
+
+Projeto desenvolvido para a disciplina de Data Science Deploy no Programa Avançado em Data Science e Decisão do  Insper
 
 Migração do notebook `diabetes-prediction.ipynb` para pipelines Kedro.
 
