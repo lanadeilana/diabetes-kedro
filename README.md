@@ -1,6 +1,6 @@
 # Previsão de Diabetes com Kedro
 
-Aluna: Ilana García
+Alunas : Ilana García & Livia Bertoni
 
 Projeto desenvolvido para a disciplina de Data Science Deploy no Programa Avançado em Data Science e Decisão do  Insper
 
