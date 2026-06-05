@@ -1,39 +1,36 @@
-# Previsão de Diabetes com Kedro
+# Diabetes Prediction with Kedro
 
-Por Ilana García 
+**By Lana**
 
-Projeto desenvolvido para a disciplina de Data Science Deploy no Programa Avançado em Data Science e Decisão do  Insper
-
-Migração do notebook `diabetes-prediction.ipynb` para pipelines Kedro.
+An end-to-end machine learning pipeline for diabetes prediction, built with Kedro for pipeline orchestration, FastAPI for model serving, and Docker for containerization.
 
 ## Setup
 
 ```bash
 pip install uv
 uv venv --python 3.11
-.venv\Scripts\activate      # Windows
-# source .venv/bin/activate # Mac/Linux
+source .venv/bin/activate  # or .venv\Scripts\activate on Windows
 uv pip install -e .
 ```
 
-## Executar
+## Run
 
 ```bash
-# Pipeline completo (engenharia de dados + treinamento)
+# Run the full pipeline
 kedro run
 
-# Visualizar o grafo
+# Visualize the pipeline
 kedro viz
 
-# Inferência
+# Run inference pipeline only
 kedro run --pipeline inference
 
-# API (extra)
+# Start the API
 uvicorn api.main:app --reload
 ```
 
 ## Pipelines
 
-- **data_engineering**: limpeza, imputação KNN, feature engineering, encoding, split
-- **training**: treina 9 modelos, salva o melhor (LightGBM por padrão)
-- **inference**: aplica o modelo nos dados de inferência do professor
+- **data_engineering** — data ingestion, cleaning, and feature engineering
+- **training** — model training, evaluation, and artifact export
+- **inference** — loads saved model and generates predictions via FastAPI
